@@ -1,0 +1,50 @@
+{
+  "baseId": "hheinsoee",
+  "nodes": [
+    {
+      "nodeId": "node_firewall_01",
+      "nodeType": "firewall",
+      "position": { "x": 400, "y": 300 },
+      "topologyBlueprint": {
+        "shape": "hexagon",
+        "radius": 40,
+        "primaryColor": "#00ffcc",
+        "glowResonance": 0.9
+      }
+    },
+    {
+      "nodeId": "node_storage_01",
+      "nodeType": "storage",
+      "position": { "x": 200, "y": 200 },
+      "topologyBlueprint": {
+        "shape": "circle",
+        "radius": 25,
+        "primaryColor": "#ffffff",
+        "glowResonance": 0.5
+      }
+    },
+    {
+      "nodeId": "node_disruptor_01",
+      "nodeType": "disruptor",
+      "position": { "x": 600, "y": 200 },
+      "topologyBlueprint": {
+        "shape": "triangle",
+        "radius": 30,
+        "primaryColor": "#ff4444",
+        "glowResonance": 0.7
+      }
+    }
+  ],
+  "dataStreams": [
+    {
+      "fromNodeId": "node_storage_01",
+      "toNodeId": "node_firewall_01",
+      "active": true
+    },
+    {
+      "fromNodeId": "node_firewall_01",
+      "toNodeId": "node_disruptor_01",
+      "active": true
+    }
+  ]
+}
