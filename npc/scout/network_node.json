@@ -1,0 +1,27 @@
+{
+  "baseId": "scout",
+  "nodes": [
+    {
+      "nodeId": "node_disruptor_01",
+      "nodeType": "disruptor",
+      "position": { "x": 400, "y": 300 },
+      "topologyBlueprint": { "shape": "triangle", "radius": 35, "primaryColor": "#ff4444", "glowResonance": 0.9 }
+    },
+    {
+      "nodeId": "node_storage_01",
+      "nodeType": "storage",
+      "position": { "x": 220, "y": 200 },
+      "topologyBlueprint": { "shape": "circle", "radius": 20, "primaryColor": "#ff8800", "glowResonance": 0.5 }
+    },
+    {
+      "nodeId": "node_storage_02",
+      "nodeType": "storage",
+      "position": { "x": 580, "y": 200 },
+      "topologyBlueprint": { "shape": "circle", "radius": 20, "primaryColor": "#ff8800", "glowResonance": 0.5 }
+    }
+  ],
+  "dataStreams": [
+    { "fromNodeId": "node_storage_01", "toNodeId": "node_disruptor_01", "active": true },
+    { "fromNodeId": "node_storage_02", "toNodeId": "node_disruptor_01", "active": true }
+  ]
+}

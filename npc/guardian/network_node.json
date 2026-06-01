@@ -1,0 +1,27 @@
+{
+  "baseId": "guardian",
+  "nodes": [
+    {
+      "nodeId": "node_firewall_01",
+      "nodeType": "firewall",
+      "position": { "x": 400, "y": 250 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 45, "primaryColor": "#00ffcc", "glowResonance": 1.0 }
+    },
+    {
+      "nodeId": "node_firewall_02",
+      "nodeType": "firewall",
+      "position": { "x": 220, "y": 390 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 30, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
+    },
+    {
+      "nodeId": "node_firewall_03",
+      "nodeType": "firewall",
+      "position": { "x": 580, "y": 390 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 30, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
+    }
+  ],
+  "dataStreams": [
+    { "fromNodeId": "node_firewall_01", "toNodeId": "node_firewall_02", "active": true },
+    { "fromNodeId": "node_firewall_01", "toNodeId": "node_firewall_03", "active": true }
+  ]
+}
