@@ -1,23 +1,48 @@
 {
   "baseId": "scout",
+  "map": {
+    "tileSize": 32,
+    "grid": [
+      "####################",
+      "#..................#",
+      "#..................#",
+      "#....+.......+.....#",
+      "#..................#",
+      "#..................#",
+      "#....+.......+.....#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "####################"
+    ]
+  },
   "nodes": [
     {
       "nodeId": "node_disruptor_01",
       "nodeType": "disruptor",
-      "position": { "x": 400, "y": 300 },
-      "topologyBlueprint": { "shape": "triangle", "radius": 35, "primaryColor": "#ff4444", "glowResonance": 0.9 }
+      "tile": { "col": 10, "row": 5 },
+      "topologyBlueprint": { "shape": "triangle", "radius": 14, "primaryColor": "#ff4444", "glowResonance": 0.9 }
     },
     {
       "nodeId": "node_storage_01",
       "nodeType": "storage",
-      "position": { "x": 220, "y": 200 },
-      "topologyBlueprint": { "shape": "circle", "radius": 20, "primaryColor": "#ff8800", "glowResonance": 0.5 }
+      "tile": { "col": 4, "row": 3 },
+      "topologyBlueprint": { "shape": "circle", "radius": 10, "primaryColor": "#ff8800", "glowResonance": 0.5 }
     },
     {
       "nodeId": "node_storage_02",
       "nodeType": "storage",
-      "position": { "x": 580, "y": 200 },
-      "topologyBlueprint": { "shape": "circle", "radius": 20, "primaryColor": "#ff8800", "glowResonance": 0.5 }
+      "tile": { "col": 16, "row": 3 },
+      "topologyBlueprint": { "shape": "circle", "radius": 10, "primaryColor": "#ff8800", "glowResonance": 0.5 }
+    }
+  ],
+  "bots": [
+    {
+      "botId": "bot_cat_01",
+      "type": "cat",
+      "tile": { "col": 4, "row": 8 },
+      "patrolNodes": ["node_storage_01", "node_disruptor_01", "node_storage_02"]
     }
   ],
   "dataStreams": [

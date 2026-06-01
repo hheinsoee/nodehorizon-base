@@ -1,23 +1,54 @@
 {
   "baseId": "guardian",
+  "map": {
+    "tileSize": 32,
+    "grid": [
+      "####################",
+      "#..................#",
+      "#...##......##.....#",
+      "#...#........#.....#",
+      "#...##......##.....#",
+      "#..................#",
+      "#..................#",
+      "#...##......##.....#",
+      "#...#........#.....#",
+      "#...##......##.....#",
+      "#..................#",
+      "####################"
+    ]
+  },
   "nodes": [
     {
       "nodeId": "node_firewall_01",
       "nodeType": "firewall",
-      "position": { "x": 400, "y": 250 },
-      "topologyBlueprint": { "shape": "hexagon", "radius": 45, "primaryColor": "#00ffcc", "glowResonance": 1.0 }
+      "tile": { "col": 10, "row": 3 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 14, "primaryColor": "#00ffcc", "glowResonance": 1.0 }
     },
     {
       "nodeId": "node_firewall_02",
       "nodeType": "firewall",
-      "position": { "x": 220, "y": 390 },
-      "topologyBlueprint": { "shape": "hexagon", "radius": 30, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
+      "tile": { "col": 4, "row": 8 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 12, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
     },
     {
       "nodeId": "node_firewall_03",
       "nodeType": "firewall",
-      "position": { "x": 580, "y": 390 },
-      "topologyBlueprint": { "shape": "hexagon", "radius": 30, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
+      "tile": { "col": 16, "row": 8 },
+      "topologyBlueprint": { "shape": "hexagon", "radius": 12, "primaryColor": "#00ddaa", "glowResonance": 0.7 }
+    }
+  ],
+  "bots": [
+    {
+      "botId": "bot_dog_01",
+      "type": "dog",
+      "tile": { "col": 8, "row": 5 },
+      "patrolNodes": ["node_firewall_01", "node_firewall_02", "node_firewall_03"]
+    },
+    {
+      "botId": "bot_dog_02",
+      "type": "dog",
+      "tile": { "col": 12, "row": 5 },
+      "patrolNodes": ["node_firewall_03", "node_firewall_01", "node_firewall_02"]
     }
   ],
   "dataStreams": [
