@@ -41,14 +41,20 @@
     {
       "botId": "bot_dog_01",
       "type": "dog",
-      "tile": { "col": 5, "row": 5 },
+      "tile": { "col": 3, "row": 2 },
       "patrolNodes": ["node_firewall_01", "node_storage_01"]
     },
     {
       "botId": "bot_cat_01",
       "type": "cat",
-      "tile": { "col": 15, "row": 3 },
+      "tile": { "col": 15, "row": 2 },
       "patrolNodes": ["node_disruptor_01", "node_firewall_01"]
+    },
+    {
+      "botId": "bot_guardian",
+      "type": "human",
+      "tile": { "col": 7, "row": 5 },
+      "patrolNodes": ["node_firewall_01", "node_storage_01", "node_disruptor_01"]
     }
   ],
   "dataStreams": [
